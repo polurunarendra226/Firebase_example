@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <EditText
+        android:id="@+id/et_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Last Name"
+        app:layout_constraintEnd_toEndOf="@+id/et_first_name"
+        app:layout_constraintStart_toStartOf="@+id/et_first_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_first_name" />
+
+    <Button
+        android:id="@+id/btn_save_to_firestore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save To Firestore"
+        app:layout_constraintEnd_toEndOf="@+id/et_last_name"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="@+id/et_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="age"
+        app:layout_constraintEnd_toEndOf="@+id/et_last_name"
+        app:layout_constraintStart_toStartOf="@+id/et_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_last_name" />
+
+    <Button
+        android:id="@+id/btn_retrive_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="retrive Data From Firestore"
+        app:layout_constraintEnd_toEndOf="@+id/btn_save_to_firestore"
+        app:layout_constraintStart_toStartOf="@+id/btn_save_to_firestore"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save_to_firestore" />
+
+    <TextView
+        android:id="@+id/tv_person_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Person Data"
+        app:layout_constraintEnd_toEndOf="@+id/btn_retrive_data"
+        app:layout_constraintStart_toStartOf="@+id/btn_retrive_data"
+        app:layout_constraintTop_toBottomOf="@+id/btn_retrive_data" />
+
+    <EditText
+        android:id="@+id/et_newfirst_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="New First Name"
+        app:layout_constraintBottom_toTopOf="@+id/et_last_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_first_name"
+        app:layout_constraintTop_toTopOf="@+id/et_first_name" />
+
+    <EditText
+        android:id="@+id/et_newlast_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="New Last Name"
+        app:layout_constraintBottom_toBottomOf="@+id/et_last_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_first_name" />
+
+    <EditText
+        android:id="@+id/et_new_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="New Age"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save_to_firestore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_age"
+        app:layout_constraintTop_toBottomOf="@+id/et_last_name" />
+
+    <Button
+        android:id="@+id/btn_update_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginEnd="58dp"
+        android:text="Update the Details"
+        app:layout_constraintBottom_toTopOf="@+id/btn_retrive_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_save_to_firestore"
+        app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
+    <ImageView
+        android:id="@+id/iv_image_firebase"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Button"
+        app:layout_constraintStart_toStartOf="@+id/iv_image_firebase"
+        app:layout_constraintTop_toBottomOf="@+id/iv_image_firebase" />
+
+    <Button
+        android:id="@+id/btn_dowload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download from Firebase"
+        app:layout_constraintEnd_toEndOf="@+id/upload"
+        app:layout_constraintStart_toStartOf="@+id/upload"
+        app:layout_constraintTop_toBottomOf="@+id/upload" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
